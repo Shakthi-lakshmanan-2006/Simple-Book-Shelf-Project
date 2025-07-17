@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-Shelf</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins&display=swap" rel="stylesheet"></head>
+
+<body>
+    <div class="navbar">
+    <h1>Book-Shelf</h1> 
+    </div>
+
+    <div class="search-bar-container">
+    <input type="text" id="search-input" placeholder="Search for a book..." />
+    <button id="search-button">Search</button>
+</div>
+
+
+
+    <div class="container">
+        <div class="book-container">
+            <h2>To Kill a Mockingbird</h2>
+            <h5>Harper Lee</h5>
+            <p>Set in the racially tense American South, this novel follows young Scout Finch.
+Her father, a lawyer, defends an innocent Black man wrongly accused of a crime.
+A timeless story of justice, innocence, and growing up.</p>
+            <button onclick="deletebook(event)">Delete</button>
+        </div> 
+
+        <div class="book-container">
+            <h2>The Alchemist</h2>
+            <h5>Paulo Coelho</h5>
+            <p>A young shepherd named Santiago follows his dream to find hidden treasure in Egypt.
+Along the way, he discovers deeper truths about life, love, and destiny.
+A beautiful tale of self-discovery and purpose.</p>
+            <button onclick="deletebook(event)">Delete</button>
+        </div> 
+
+        <div class="book-container">
+            <h2>Pride and Prejudice</h2>
+            <h5> Jane Austen</h5>
+            <p>Elizabeth Bennet navigates love, pride, and social expectations.
+She clashes and connects with the reserved Mr. Darcy.
+A witty, romantic look at 19th-century English society.</p>
+            <button onclick="deletebook(event)">Delete</button>
+        </div> 
+
+        <div class="book-container">
+            <h2>Atomic Habits</h2>
+            <h5> James Clear</h5>
+            <p>Learn how tiny changes can lead to remarkable results.
+This book breaks down how habits are formed and sustained.
+A practical guide for building better daily routines.</p>
+            <button onclick="deletebook(event)">Delete</button>
+        </div> 
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div class="popup-box">
+        <h2>Add Book</h2>
+        <form>
+            <input type="text" placeholder="Book Title" id="book-title">
+            <input type="text" placeholder="Book Author" id="book-author">
+            <textarea placeholder="Short Description" id="book-description"></textarea>
+            <button id="add-book">ADD</button>
+            <button id="cancel-popup">CANCEL</button>
+            </form>
+    </div>
+
+    <button class="add-button" id="add-popup">+</button>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
